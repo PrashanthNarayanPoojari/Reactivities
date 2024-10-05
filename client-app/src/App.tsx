@@ -10,6 +10,7 @@ function App() {
 
   const [activities, setActivities] = useState([]);
 
+  const val =true;
   useEffect(() => {
     axios.get('http://localhost:5000/Activities')
       .then(response => {
@@ -24,8 +25,9 @@ function App() {
         {
           activities.map((activity: any) => (
             <List.Item key={activity.id}>{activity.id}</List.Item >
-          ))
-        }
+          ))       
+
+}
       </List>
       {
         tests.map(testInterface => (
